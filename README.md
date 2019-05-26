@@ -6,6 +6,8 @@ http://localhost:8085/api/add-user
 requestBody:
 ****
 Method: POST
+****
+
 {
 	"fName":"Pakkurthi",
 	"lName":"Dorababu",
@@ -30,7 +32,41 @@ response Negative:
     "message": "User already exist",
     "path": "/api/add-user"
 }
-
+***
+{
+    "timestamp": "2019-05-26T20:04:37.594+0000",
+    "status": 400,
+    "error": "Bad Request",
+    "errors": [
+        {
+            "codes": [
+                "NotEmpty.user.fName",
+                "NotEmpty.fName",
+                "NotEmpty.java.lang.String",
+                "NotEmpty"
+            ],
+            "arguments": [
+                {
+                    "codes": [
+                        "user.fName",
+                        "fName"
+                    ],
+                    "arguments": null,
+                    "defaultMessage": "fName",
+                    "code": "fName"
+                }
+            ],
+            "defaultMessage": "must not be empty",
+            "objectName": "user",
+            "field": "fName",
+            "rejectedValue": "",
+            "bindingFailure": false,
+            "code": "NotEmpty"
+        }
+    ],
+    "message": "Validation failed for object='user'. Error count: 1",
+    "path": "/api/add-user"
+}
 *************
 
 ## Update User
@@ -59,6 +95,43 @@ response Negtive:
     "message": "User not found",
     "path": "/api/update-user/5ceae9d2fb64d71930f51a0"
 }
+****
+{
+    "timestamp": "2019-05-26T20:04:37.594+0000",
+    "status": 400,
+    "error": "Bad Request",
+    "errors": [
+        {
+            "codes": [
+                "NotEmpty.user.fName",
+                "NotEmpty.fName",
+                "NotEmpty.java.lang.String",
+                "NotEmpty"
+            ],
+            "arguments": [
+                {
+                    "codes": [
+                        "user.fName",
+                        "fName"
+                    ],
+                    "arguments": null,
+                    "defaultMessage": "fName",
+                    "code": "fName"
+                }
+            ],
+            "defaultMessage": "must not be empty",
+            "objectName": "user",
+            "field": "fName",
+            "rejectedValue": "",
+            "bindingFailure": false,
+            "code": "NotEmpty"
+        }
+    ],
+    "message": "Validation failed for object='user'. Error count: 1",
+    "path": "/api/add-user"
+}
+*********
+
 
 ## Delete User
 
