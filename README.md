@@ -30,14 +30,14 @@ requestBody:
 Method: POST
 ****
 
-{<br>
+{
 
-	"fName":"Pakkurthi",<br>
-	"lName":"Dorababu",<br>
-	"email":"test2@test.com",<br>
-	"pinCode":531060,<br>
-	"birthDate": "22-MAY-2007"<br>
-}<br>
+	"fName":"Pakkurthi",
+	"lName":"Dorababu",
+	"email":"test2@test.com",
+	"pinCode":531060,
+	"birthDate": "22-MAY-2007"
+}
 
 ****
 
@@ -101,8 +101,33 @@ http://localhost:8085/api/update-user/5ceae9d2fb64d71930f51a00<br>
 
 method:PUT<br>
 
+request Body:
+
+
+{
+	
+	"id":"5ceae9d2fb64d71930f51a00',
+	"fName":"Pakkurthi",
+	"lName":"Dorababu",
+	"email":"test2@test.com",
+	"pinCode":531060,
+	"birthDate": "22-MAY-2007"
+}
+
 response Positive:<br>
 
+
+{
+	
+	"id":"5ceae9d2fb64d71930f51a00',
+	"fName":"Pakkurthi",
+	"lName":"Dorababu",
+	"email":"test2@test.com",
+	"pinCode":531333,
+	"birthDate": "22-MAY-2007"
+}
+
+<br>Response Negative:<br>
 {
 
     "timestamp": "2019-05-26T20:04:37.594+0000",
@@ -137,6 +162,15 @@ response Positive:<br>
     ],
     "message": "Validation failed for object='user'. Error count: 1",
     "path": "/api/update-user"
+}
+
+{
+
+    "timestamp": "2019-05-26T19:43:57.320+0000",
+    "status": 404,
+    "error": "Not Found",
+    "message": "User not found",
+    "path": "/api/update-user/5ceae9d2fb64d71930f51a0"
 }
 *********
 
