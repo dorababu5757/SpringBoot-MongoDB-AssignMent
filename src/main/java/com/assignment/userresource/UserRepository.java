@@ -9,8 +9,6 @@ public interface UserRepository extends MongoRepository<User, String> {
 	
 	List<User> findByEmail(String email);
 	
-	//@Query("select e from User e where  month(e.birthDate) = ?1 ")
-	//@Query(value = "FROM User WHERE e.birthDate Like %?0%")
 	@Query(value = "{'month': {$regex : ?0, $options: 'i'}}")
 	List<User> findByMonth(String month);
 	
